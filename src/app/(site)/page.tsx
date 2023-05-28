@@ -6,15 +6,16 @@ import { Prisma, PrismaClient} from '@prisma/client'
 
 const client = new PrismaClient();
 
+
 const records = await client.records.findMany();
 
-
+console.log(records)
 
 export default function Home() {
+  
   return (
     <main>
       Hello?
-      <button onClick={() => console.log(records)}></button>
     </main>
   )
 }
